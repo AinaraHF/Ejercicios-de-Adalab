@@ -1,0 +1,10 @@
+html{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: purple;
+    background-color: mediumpurple;
+    line-height: 1.5;
+    }
+body main article aside ul li a {    
+    color: red;
+}
