@@ -1,0 +1,12 @@
+div {
+    font-size: 100px;
+    background-color: blue;
+    display: none;
+    }
+.atardecer {
+    border: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: auto;
+    margin-bottom: auto;
+}
