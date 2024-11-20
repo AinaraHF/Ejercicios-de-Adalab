@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}.box {
+    background-color: purple;
+    border: solid black;
+}
