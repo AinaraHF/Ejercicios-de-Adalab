@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+.container{
+background-color: aquamarine;
+}
+.foto {
+    width: 100px;
+    height: 100px;
+}
