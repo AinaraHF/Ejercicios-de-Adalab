@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    width: 500px;
+    height: 100px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.part-home{
+    padding-left: 20px;
+}
+.part-contacto{
+    padding-right: 20px;
+}
