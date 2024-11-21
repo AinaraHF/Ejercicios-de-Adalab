@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    overflow: scroll;
+    
+}
+.aviso{
+    height: 100px;
+    background-color: yellow;
+}
