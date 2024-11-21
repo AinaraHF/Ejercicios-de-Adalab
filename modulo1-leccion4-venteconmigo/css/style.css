@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: purple;
+    position: static;
+}
+.container{
+    width: 200px;
+    height: 100px;
+    overflow: scroll;
+    position: fixed;
+}
+.lorem{
+}
