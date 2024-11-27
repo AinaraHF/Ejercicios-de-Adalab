@@ -8,7 +8,7 @@
     height: 500px;
     background-color: aqua;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }.box {
     background-color: purple;
     border: solid black;

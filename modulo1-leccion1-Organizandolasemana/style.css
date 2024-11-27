@@ -1,3 +1,7 @@
 main table th {
-border: 1px solid black;
+    border: 2px solid black;
+}
+main table td {
+    border: 1px solid black;
+
 }

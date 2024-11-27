@@ -3,10 +3,34 @@
     margin: 0;
     box-sizing: 0;
 }
-.container{
-background-color: aquamarine;
+h1{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.box{
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    height: 93vh;
+}
+.article{
+    width: 50vw;
+    padding-bottom: 20px;
+    text-align: center;
 }
 .foto {
     width: 100px;
     height: 100px;
+}
+.article5{
+    width: 100vw;
+    order: -1;
+    padding-top: 20px;
+}
+footer{
+    background-color: black;
+    color: white;
+    height: 40px;
+    text-align: center;
 }
