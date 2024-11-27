@@ -1,0 +1,33 @@
+/*@import 'core/variables';
+@import 'core/reset';
+@import 'components/code';
+@import 'components/links';
+@import 'layout/page';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'pages/index';*/
+
+.header {
+    background-color: azure;
+    @media (width<768px){
+        height: 75px;
+    }
+    @media (width:768px) and (width: 1280px){
+        height: 100px;
+    }
+    @media (width>1280px){
+        height: 110px;
+    }
+}
+.section1 {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+.section2 {
+    &button{
+        background-color: red;
+        border-radius: 5px;
+        height: 45px;
+    }
+}
