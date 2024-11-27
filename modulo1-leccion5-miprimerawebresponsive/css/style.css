@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+    background-color: lightgray;
+}
+.links{
+    background-color: greenyellow;
+}
+.texto{
+    background-color: yellow;
+}
+-main{
+    background-color: lightgray;
+}
+.footer{
+    background-color: gray;
+}
+@media (width < 480px) {
+    .body{
+        background-color: lightgray;
+    }
+  }
+@media (min-width: 480px) and (max-width: 1000px) {
+    .body{
+        background-color: lightgray;
+    }
+  }
+@media (width < 480px) {
+    .body{
+        background-color: green;
+    }
+  }
+  
