@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adalab Web Starter Kit</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./scss/main.scss" />
+  <link rel="icon" href="./images/favicon.png" />
+</head>
+
+<body>
+  <header>
+    <h1>Mi primer formulario</h1>
+  </header>
+  <form action="https://dev.adalab.es/api/form" method="POST">
+    <label for="name">Nombre</label>
+    <input placeholder="Ej. Pilar" id="name" type="text" required>
+    <label for="surname">Apellido</label>
+    <input placeholder="Ej. Fernández" id="surname" type="text">
+    <label for="email">Correo electrónico</label>
+    <input placeholder="Ej. pilarfdez@gmail.com" id="email" type="email" required>
+    <label for="street">Calle</label>
+    <input placeholder="Ej. Gran vía" id="street" type="text" required>
+    <label for="city">Ciudad</label>
+    <input placeholder="Ej. Bilbao" id="city" type="text" required value="Madrid">
+    <label for="county">Provincia</label>
+    <input placeholder="Ej. Vizcaya" id="county" type="text" required>
+    <label for="country">País</label>
+    <input placeholder="Ej. España" id="country" type="text" required value="España">
+    <label for="id">DNI</label>
+    <input placeholder="Ej. 77777777-A" id="id" type="number" required>
+    <label for="phoneno">Teléfono</label>
+    <input placeholder="Ej. 777777777 " id="phoneno" type="tel" required>
+    <label for="password">Contraseña</label>
+    <input placeholder="Escribe aquí tu contraseña..." id="password" type="password" required>
+    <label for="confirmpassword">Confirmar contraseña</label>
+    <input placeholder="Vuelve a escribir tu contraseña" id="confirmpassword" type="password" required>
+    <h3>Elija su género</h3>
+    <div>
+      <label for="gender">
+      <input
+          id="genderoption1"
+          type="checkbox"
+          value="woman"
+          name="genderoptions"
+        />
+        Mujer
+      </label>
+      <input
+          id="genderoption2"
+          type="checkbox"
+          value="man"
+          name="genderoptions"
+        />
+        Hombre
+      </label>
+      <input
+          id="genderoption3"
+          type="checkbox"
+          value="non-binary"
+          name="genderoptions"
+        />
+        No binario
+      </label>
+    </div>
+    <label for="size">Talla de zapato:</label>
+      <select id="size" name="size">
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+      </select>
+    <label for="comments">Comentarios:</label>
+    <textarea id="comments" name="comments" rows="8" cols="80"></textarea>
+    <input type="submit" value="Enviar">
+
+  </form>
+  
+</body>
+
+</html>
