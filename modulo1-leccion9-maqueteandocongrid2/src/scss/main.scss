@@ -1,0 +1,51 @@
+/*@import 'core/variables';
+@import 'core/reset';
+@import 'components/code';
+@import 'components/links';
+@import 'layout/page';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'pages/index';*/
+
+.wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .item1{
+    height: 20vh;
+    grid-column: span 12;
+    background: pink;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item2{
+    height: 60vh;
+    grid-column: span 4;
+    background: purple;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item3{
+    height: 60vh;
+    grid-column: span 8;
+    background: brown;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item4{
+    height: 20vh;
+    grid-column: span 12;
+    background: lightblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
