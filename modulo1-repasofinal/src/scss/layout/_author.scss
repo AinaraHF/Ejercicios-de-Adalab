@@ -1,0 +1,23 @@
+.author{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+         @media (width>768px){
+             width: 30%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+             transform: translateY(-100px);
+    }
+}
+.bio{
+
+    &_img{
+        border-radius: 50%;
+    }
+}
+.menu ul{
+    list-style: none;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,21 @@
+.main{
+    @media (width>768px){
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;;
+    }
+}
+
+.articles{
+    @media (width>768px){
+      width: 70%;
+    }
+  
+  &_post{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      &-title{
+        padding-bottom: 10px;
+      }
+    }
+}
