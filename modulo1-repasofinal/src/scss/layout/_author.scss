@@ -5,10 +5,10 @@
     gap: 15px;
     margin-bottom: 15px;
          @media (width>768px){
-             width: 30%;
+            width: 30%;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
-             transform: translateY(-100px);
+            transform: translateY(-100px);
     }
 }
 .bio{
