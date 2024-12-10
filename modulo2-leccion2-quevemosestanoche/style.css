@@ -1,0 +1,19 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.btn {
+    background-color: aquamarine;
+    color: white;
+}
+
+li {
+list-style-type: none;
+} 
+
+.hidden{
+    display: none;
+}

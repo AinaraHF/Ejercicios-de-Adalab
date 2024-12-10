@@ -5,5 +5,5 @@ const message = document.querySelector(".message");
 const input = document.querySelector(".input");
 
 button.addEventListener("click", () => {
-  message.innerHTML = innerHTML+ input.value; 
+  message.innerHTML = message.innerHTML + input.value; 
 });
