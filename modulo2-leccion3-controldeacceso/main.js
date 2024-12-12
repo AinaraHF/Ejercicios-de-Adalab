@@ -1,13 +1,14 @@
 'use strict';
 
-const inputName = 'Maria';
-const p1 = document.querySelector('.p1');
-const p2 = document.querySelector('.p2');
+const inputName = document.querySelector('.inputName');
+const message = document.querySelector('.message');
 
+const inputName = 'Maria';
+
+let msg;
 if (inputName.value === 'Maria'){
-    p1.classList.remove('hidden');
-    p1.innerHTML = p1.innerHTML + inputName.value;
-} else if (inputvalue!==Maria){
-    p2.classList.remove('hidden');
-    
+    message = 'Bienvenida, + inputName';
+} 
+else if (inputName.value !== 'Maria'){
+    message = 'Lo siento pero el usuario que has introducido no está registrado';    
 }
