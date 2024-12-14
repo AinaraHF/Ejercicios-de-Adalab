@@ -10,14 +10,27 @@ const thirdDogImage =
   'https://images.dog.ceo/breeds/affenpinscher/n02110627_7065.jpg';
 const thirdDogName = 'Lana';
 
-const dina = document.querySelector('.dina');
-dina.innerHTML = firstDogImage + firstDogName;
+const box = document.querySelector('.js-box');
+const list = `<ul>
+        <li> 
+        <p> ${firstDogName}</p>
+        <img src="${firstDogImage}" alt="">
+        </li>
+        <li>
+        <p> ${secondDogName}</p>
+        <img src="${secondDogImage}" alt="">
+        </li>
+        <li>
+        <p> ${thirdDogName}</p>
+        <img src="${thirdDogImage}" alt="">
+        </li>
+    </ul>`;
 
-const luna = document.querySelector('.luna');
-luna.innerHTML = secondDogImage + secondDogName;
+box.innerHTML = list;
 
-const lana = document.querySelector('.lana');
-lana.innerHTML = thirdDogImage + thirdDogName;
+
+
+
 
 
 

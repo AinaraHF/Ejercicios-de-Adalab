@@ -4,8 +4,10 @@
     box-sizing: border-box;
 }
 
-.btn{
+.js-btn{
     padding: 10px;
     background-color: aquamarine;
     color: white;
+    border-radius: 5px;
+    border: 2px solid purple;
 }

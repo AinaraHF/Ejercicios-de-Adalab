@@ -1,11 +1,11 @@
-.box {
+.js-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-.btn {
+.js-btn {
     background-color: aquamarine;
     color: white;
 }

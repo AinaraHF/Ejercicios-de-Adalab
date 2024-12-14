@@ -1,9 +1,10 @@
 'use strict'
 
-const button = document.querySelector(".btn");
-const message = document.querySelector(".message");
-const input = document.querySelector(".input");
+const button = document.querySelector(".js-btn");
+const message = document.querySelector(".js-message");
+const inputName = document.querySelector(".js-name");
 
 button.addEventListener("click", () => {
-  message.innerHTML = message.innerHTML + input.value; 
+  message.innerHTML = message.innerHTML + inputName.value; 
+  inputName.value = "";
 });

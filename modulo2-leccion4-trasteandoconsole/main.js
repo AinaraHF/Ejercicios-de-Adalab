@@ -1,7 +1,8 @@
 'use strict';
 
-const 7+8 = 15;
+const myNumber = 8;
+const herNumber = 7;
 
-console.log('7+8');
+console.log(myNumber + herNumber);
 
 

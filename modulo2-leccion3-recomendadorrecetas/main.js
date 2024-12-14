@@ -1,7 +1,17 @@
 'use strict';
 
-const chicken = document.querySelector('.chicken');
-const fish = document.querySelector('.fish');
-const spinach = document.querySelector('.spinach');
+let ingredient = 'Pollo';
+ingredient = 'Merluza';
+ingredient = 'Espinacas'
 
-
+switch (ingredient) {
+  case 'Pollo':
+    console.log('Filete con patatas');
+    break;
+  case 'Merluza':
+    console.log('Merluzita en salsa verde');
+    break;
+  case 'Espinacas':
+    console.log('Espinacas rehogadas');
+    break;
+  }

@@ -1,39 +1,38 @@
 'use strict';
 
-const button = document.querySelector('.btn');
-const list = document.querySelector('.list');
-const movie1 = document.querySelector('.movie1');
-const movie2 = document.querySelector('.movie2');
-const movie3 = document.querySelector('.movie3');
-const movie4 = document.querySelector('.movie4');
-const movie5 = document.querySelector('.movie5');
-const text = document.querySelector('.text');
+const button = document.querySelector('.js-btn');
+const box = document.querySelector('.js-box');
 
+const inception = 'Inception';
+const theButterFlyEffect = 'The butterfly effect';
+const eternalSunshineOfTheSM = 'Eternal sunshine of the spotless mind';
+const blueVelvet = 'Blue velvet';
+const split = 'Split';
+
+const content = `<ul">
+            <li>${inception}</li>
+            <li>${theButterFlyEffect}</li>
+            <li>${eternalSunshineOfTheSM}</li>
+            <li>${blueVelvet}</li>
+            <li>${split}</li>
+        </ul>`;
 
 button.addEventListener('click', ()=> {
-    list.classList.remove('hidden');
+    box.innerHTML= box.innerHTML + content;
 });
 
-movie1.addEventListener('mouseout', ()=> {
+const text = document.querySelector('.js-text');
+
+
+inception.addEventListener('click', ()=> {
     text.classList.remove('hidden');
-    text.innerHTML = text.innerHTML + movie1.innerHTML;
+    text.innerHTML = text.innerHTML + inception;
 });
 
-movie2.addEventListener('mouseout', ()=> {
-    text.classList.remove('hidden');
-    text.innerHTML = text.innerHTML + movie2.innerHTML;    
-});
-movie3.addEventListener('mouseout', ()=> {
-    text.classList.remove('hidden');
-    text.innerHTML = text.innerHTML + movie3.innerHTML;
-});
-movie4.addEventListener('mouseout', ()=> {
-    text.classList.remove('hidden');
-    text.innerHTML = text.innerHTML + movie4.innerHTML;    
-});
-movie5.addEventListener('mouseout', ()=> {
-    text.classList.remove('hidden');
-    text.innerHTML = text.innerHTML + movie5.innerHTML;
-});
+
+
+
+
+
 
 

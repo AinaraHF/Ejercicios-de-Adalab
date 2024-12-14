@@ -1,7 +1,7 @@
 'use strict';
 
-const button1 = document.querySelector('.btn1');
-const button2 = document.querySelector('.btn2');
+const button1 = document.querySelector('.js-btn1');
+const button2 = document.querySelector('.js-btn2');
 
 button1.addEventListener('click', ()=> {
     button1.classList.toggle('btnchange');

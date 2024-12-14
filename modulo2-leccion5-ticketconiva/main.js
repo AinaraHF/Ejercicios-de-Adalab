@@ -1,3 +1,6 @@
-function price(12,10){
-    return 'Precio sin IVA: 21%*price, IVA: 21% y Total: '
+function price(a){
+    return `Precio sin IVA: ${a}, IVA ${0.21*a} y Total: ${a+0.21*a}.`;
 }
+
+price(37);
+console.log(price(37));

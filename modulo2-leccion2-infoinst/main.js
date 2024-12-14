@@ -1,7 +1,7 @@
 'use strict';
 
-const input = document.querySelector(".input");
-const text = document.querySelector(".text");
+const input = document.querySelector(".js-input");
+const text = document.querySelector(".js-text");
 
 input.addEventListener("keyup", () => {
     text.innerHTML = input.value;
