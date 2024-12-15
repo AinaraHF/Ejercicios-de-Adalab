@@ -1,11 +1,13 @@
-const result = document.querySelector('.result');
+//const result = document.querySelector('.result');
 
-function handleClick(){
+let countUp = 1;
+
+function handleClick(event){
 function count(a){
-    return a*a;
+    ++countUp
 }
-count(2);
-console.log(count(2))
+count(1);
+console.log(count(1));
 }
 
 
