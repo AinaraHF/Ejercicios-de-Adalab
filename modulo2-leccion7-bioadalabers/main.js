@@ -24,9 +24,10 @@ console.log(adalaber1.run("50"));
 
 
 //Ejer1.2
-adalaber1.showBio = () => `Mi nombre es adalaber1.name, tengo ${adalaber1.age} y soy ${adalaber1.job}.`;
-    console.log(adalaber1.showBio);
+adalaber1.showBio = () => `Mi nombre es ${adalaber1.name}, tengo ${adalaber1.age} años y soy ${adalaber1.job}.`;
+    console.log(adalaber1.showBio());
 
-/*const showBio = function (){`Mi nombre es ${adalaber1.name}, tengo ${adalaber1.age} y soy ${adalaber1.job}.`;};
-console.log(adalaber1.showBio);*/
+adalaber2.showBio = () => `Mi nombre es ${adalaber2.name}, tengo ${adalaber2.age} años y soy ${adalaber2.job}.`;
+    console.log(adalaber2.showBio());
+
 
