@@ -1,3 +1,6 @@
+
+const result = document.querySelector('.js-result');
+
 const myName = 'Ainara Hermoso Fernandez';
 
-console.log(' Mi nombre es ' + myName + ' y está compuesto por '  + myName.length + ' caracteres.');
+result.innerHTML = ' Mi nombre es ' + myName + ' y está compuesto por '  + myName.length + ' caracteres.'
