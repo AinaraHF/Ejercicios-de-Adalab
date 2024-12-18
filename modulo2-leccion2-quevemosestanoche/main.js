@@ -9,25 +9,25 @@ const eternalSunshineOfTheSM = 'Eternal sunshine of the spotless mind';
 const blueVelvet = 'Blue velvet';
 const split = 'Split';
 
-const content = `<ul">
-            <li>${inception}</li>
+const content = `<li>${inception}</li>
             <li>${theButterFlyEffect}</li>
             <li>${eternalSunshineOfTheSM}</li>
             <li>${blueVelvet}</li>
-            <li>${split}</li>
-        </ul>`;
+            <li>${split}</li>`;
 
 button.addEventListener('click', ()=> {
-    box.innerHTML= box.innerHTML + content;
+    box.innerHTML= content;
 });
 
 const text = document.querySelector('.js-text');
 
-
-inception.addEventListener('click', ()=> {
-    text.classList.remove('hidden');
-    text.innerHTML = text.innerHTML + inception;
+box.addEventListener('click', (ev)=>{
+    const movie = ev.target.innerHTML;
+    text.innerHTML = 'La peli seleccionada es: ' + movie;
+    console.log(movie);
 });
+
+
 
 
 
