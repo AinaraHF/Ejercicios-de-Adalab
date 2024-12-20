@@ -1,0 +1,15 @@
+.yellow{
+background-color: #ffcc00;
+}
+
+.orange{
+background-color: #ff9900;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
