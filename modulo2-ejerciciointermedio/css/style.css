@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.play{
+.button{
     background-color: rgb(75, 211, 166);
     color: white;
     width: 60px;
@@ -18,4 +18,8 @@
     padding: 3px;
     border-radius: 5px;
     font-weight: bold;
+}
+
+.hidden{
+    display: none;
 }
