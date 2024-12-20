@@ -44,9 +44,9 @@ function handleClick(ev){
     const moveRandom = getRandomMove();
     if(moveRandom === select.value){
         result.innerHTML = 'Empate';
-    } else if(moveRandom === 'rock' && select.value === 'scissors' || moveRandom === 'scissors' && select.value === 'paper' || moveRandom === 'paper' && select.value === 'rock'){
-        result.innerHTML = '¡Has Ganado!';
     } else if(moveRandom === 'rock' && select.value === 'paper' || moveRandom === 'scissors' && select.value === 'rock' || moveRandom === 'paper' && select.value === 'scissors'){
+        result.innerHTML = '¡Has Ganado!';
+    } else if(moveRandom === 'rock' && select.value === 'scissors' || moveRandom === 'scissors' && select.value === 'paper' || moveRandom === 'paper' && select.value === 'rock'){
         result.innerHTML = '¡Has perdido!';
     }
     counter();
@@ -76,6 +76,7 @@ function resetGame(ev){
     button.classList.remove('hidden');
     resetCounter();
     winnerResult.innerHTML = '';
+    result.innerHTML ='¡Vamos a Jugar!';
 }
 
 
