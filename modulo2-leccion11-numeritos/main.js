@@ -2,17 +2,17 @@
 
 const numbers = [];
 
-/*function get100Numbers (){
-   for (let i = 0; i < 100; i++){
-   numbers = [i]};
+function get100Numbers (){
+for (let i = 1; i < 101; i++){
+    numbers.push(i)};
+}
+get100Numbers();
+
+function getReversed100Numbers (){
+    get100Numbers();
+    numbers.reverse();
 }
 
-console.log(numbers.push(get100Numbers))*/
+getReversed100Numbers();
 
-for (let i = 0; i < 100; i++){
-    function get100Numbers (){
-        return numbers.push
-    }
-}
-
-console.log(get100Numbers)
+console.log (numbers)
