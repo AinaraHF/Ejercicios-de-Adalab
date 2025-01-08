@@ -3,12 +3,32 @@
 const lostNumbers = [4, 8, 15, 16, 23, 42];
 
 function bestLostNumber (){
-    const evenNumbers = [];
-    for (const numbers of lostNumbers){
-        lostNumbers % 2;
-    }
-    evenNumbers.push()
+    
 }
 bestLostNumber()
 
-console.log(bestLostNumber)
+const evenNumbers = [];
+for (const number of lostNumbers) {
+    if (number % 2 === 0){
+       evenNumbers.push(number);
+    }
+}
+
+console.log(evenNumbers);
+
+const threeMultiple = [];
+for (const number of lostNumbers) {
+    if (number % 3 === 0){
+        threeMultiple.push(number);
+     }
+    
+}
+
+console.log(threeMultiple);
+
+const mix = evenNumbers.concat(threeMultiple);
+
+console.log(mix)
+
+
+
