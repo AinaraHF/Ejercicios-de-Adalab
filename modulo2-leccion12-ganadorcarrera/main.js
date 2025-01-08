@@ -8,4 +8,6 @@ const runners = [
     {name: 'Cho Chang', time: 35},
   ];
 
-  const result = scores.reduce((acc, number) => acc + number);
+  const result = runners.reduce((acc, number) => acc + number);
+
+  console.log(result);
