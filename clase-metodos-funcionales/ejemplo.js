@@ -16,21 +16,22 @@ const ulStudent = document.querySelector('.js-list');
 
 // crear las option de un select de forma dinámica con las ciudades
 for (const city of cities) {
-    selectCities.innerHTML += `<option value="${city}">${city}</option>`
+    selectCities.innerHTML += `<option value="${city}">${city}</option>`;
 }
 
 // buscar a las estudiantes por ciudad
 
-function renderStudents(){
+function renderStudents(list){
     ulStudent.innerHTML ='';
     for (const item of list) {
-        ulStudent.innerHTML += `<li>${item.name}</li>`
+        ulStudent.innerHTML += `<li>${item.name}</li>`;
     }
 };
 
 function handleChange(ev){
     const valueSelected = ev.currentTarget.value;
-    const filterStudents = students.filter((student) => student.city.toLocaleLowerCase() === valueSelected.toLocaleLowerCase());
+    const filterStudents = students.filter((student) => student.city.toLowerCase() === valueSelected.toLocaleLowerCase()
+);
     renderStudents(filterStudents);
 };
 
