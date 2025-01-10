@@ -8,6 +8,12 @@ const runners = [
     {name: 'Cho Chang', time: 35},
   ];
 
-  const result = runners.reduce((acc, runners) => acc + runners.time,0); // para sacar el tiempo total
+  const winner = runners.reduce((acc, people) => {
+    if(people.time < acc.time){
+      return people;
+    }else{
+      return acc;
+    }
+  }, runners[0] )
  
-  console.log(result);
+  console.log(winner);

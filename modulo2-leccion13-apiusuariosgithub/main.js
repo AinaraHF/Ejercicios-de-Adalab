@@ -6,8 +6,8 @@ const userName = document.querySelector('.js-name');
 const userPic = document.querySelector('.js-img');
 const userRepos = document.querySelector('.js-repos');
 
-function renderUser(){
-fetch('https://api.github.com/users/gootyfer')
+function renderUser(username){    
+fetch(`https://api.github.com/users/${username}`)
     .then((response) => response.json())
     .then((info) =>{
         userName.innerHTML = info.login;
@@ -19,7 +19,7 @@ fetch('https://api.github.com/users/gootyfer')
 function handleClick(ev){
     ev.preventDefault();
     const inputValue = inputSearch.value;
-    //const filteredValue = tasks.filter((task)=> task.name.includes(inputValue));
+    renderUser(inputValue);
 }
 
 btnSearch.addEventListener('click', handleClick);
