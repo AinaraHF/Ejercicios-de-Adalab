@@ -17,4 +17,5 @@ const index = users.findIndex((user) => user.pin === 5232);
 console.log(index);
 
 const keepUsers = users.splice(3, 1);
+console.log(users)
 console.log(keepUsers);
