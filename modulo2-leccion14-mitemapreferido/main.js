@@ -13,6 +13,7 @@ function handleChangeLight(){
 
 function handleChangeDark(){
     const darkValue = darkTheme.value;
+    console.log(darkValue)
     if(darkValue){
         darkTheme.classList.add('darktheme')
     }else{}
