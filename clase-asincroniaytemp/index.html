@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronía y temporizadores</title>
+    <script
+      src="https://kit.fontawesome.com/66349fc88a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="http://beta.adalab.es/resources/stylesheets/all.css"
+    />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="page darkmode">
+    
+    <h1>Página de inicio</h1>
+
+    <p class="js-cont"></p>
+    <input type="submit" value="stop" class="js-stopbtn"/>
+    <input type="submit" value="reset" class="js-resetbtn"/>
+    <input type="submit" value="resume" class="js-resumebtn"/>
+
+    <div>
+        <h2>
+            <span class="js-hours">00:</span>
+            <span class="js-minutes">00:</span>
+            <span class="js-seconds">00</span>
+        </h2>
+    </div>
+    
+    <aside class="js_newsletter background hidden">
+        <div class="modal__window">
+          <div class="modal__button modal__close">
+            <button class="js_close-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          Suscríbete a nuestra newsletter!
+          <form>
+            <input
+              class="js_email"
+              type="email"
+              placeholder="P.ej: paquita@salas.es"
+              required
+            />
+          </form>
+        </div>
+      </aside>
+
+    <script src="./clock.js"></script>
+</body>
+</html>
