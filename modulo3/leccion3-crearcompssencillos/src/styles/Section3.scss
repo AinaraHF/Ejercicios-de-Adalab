@@ -1,0 +1,61 @@
+.section3{
+    background-color: #d9e4cc;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &_title{
+        color: #626262;
+        font-size: 12px;
+        font-family: 'Roboto Slab';
+        font-weight: bold;
+    }
+    &_title2{
+        font-size: 20px;
+        font-family: 'Roboto Slab';
+        font-weight: bold;
+        padding-top: 5px;
+            @media (width>768px){
+                font-size: 28px;
+        }
+    }
+}
+.products{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-top: 20px;
+        @media (width>768px){
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 120px;
+    }
+    &_img{
+        width: 122px;
+        height: 133px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 4px 0 rgba(20, 20, 20, 0.3);
+    }
+    &_text{
+        font-family: 'Roboto Slab';
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 5px;
+            @media (width>768px){
+                font-size: 18px;
+        }
+    }
+}
+.begin{
+    background-color: #6c933e;
+    color: white;
+    border: 1px solid #6c933e;
+    font-family: 'Roboto';
+    font-size: 20px;
+    border-radius: 30px;
+    padding: 10px 30px;
+}
