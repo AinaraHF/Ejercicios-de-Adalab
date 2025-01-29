@@ -12,7 +12,7 @@ function App() {
     setSearchValue(value.toLowerCase())
   }
 
-  const filterFlowers = dataJson.filter(flower => flower.title.toLowerCase().includes(searchValue)) //SIEMPRE que haya filtro, se crea donde los datos principales y al componente que pinta la lista le mandamos este, como en Gallery
+  const filterFlowers = dataJson.filter(flower => flower.title.toLowerCase().includes(searchValue)) //SIEMPRE que haya filtro, se crea donde los datos principales y al componente que pinta la lista le mandamos este, como en Gallery 
 
   return (
     <>

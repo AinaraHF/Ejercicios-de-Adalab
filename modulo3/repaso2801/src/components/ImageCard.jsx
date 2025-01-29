@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 
 function ImageCard({ flowerData }) {
 
-    const {title, url} = flowerData
+    const {title, url} = flowerData //más destructuring de flowerData en este caso y luego no hace falta utilizar el objeto en sí abajo, id no es necesario porque no vamos a necesitarlo aquí
   return (
     <article>
         <img src={url} alt="" />
