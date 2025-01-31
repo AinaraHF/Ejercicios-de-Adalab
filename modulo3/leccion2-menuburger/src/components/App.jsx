@@ -1,12 +1,36 @@
+import { useState } from "react"
+import "../styles/App.css"
 
 function App() {
   
+  const [menu, setMenu] = useState ("hidden")
+  const [burger, setBurger] = useState("")
+
+  const handleClickBurger = () =>{
+    setMenu("")
+    setBurger("hidden")
+  }
+
+  const handleClickarrow = () =>{
+    setMenu("hidden")
+    setBurger("")
+  }
+
+
+  /*const handleClick = () =>{
+    if(menu === "hidden"){
+      setBurger("")
+    }else{
+      setBurger("hidden")
+      setMenu("")
+    }
+  }*/
 
   return (
     <>
-    <i className="fa-solid fa-bars"></i>
-    <div>
-      <i className="fa-solid fa-arrow-left"></i>
+    <button className={burger} onClick={handleClickBurger}>☰</button>
+    <div className={menu}>
+      <i className="fa-solid fa-arrow-left" onClick={handleClickarrow}></i>
       <ul>
         <li>Home</li>
         <li>Nosotras</li>
