@@ -9,7 +9,7 @@ function App() {
   const handleClickBurger = () =>{
     setMenu("")
     setBurger("hidden")
-  }
+ }
 
   const handleClickarrow = () =>{
     setMenu("hidden")

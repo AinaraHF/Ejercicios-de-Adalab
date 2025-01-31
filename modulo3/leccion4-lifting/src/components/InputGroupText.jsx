@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
 
 function InputGroupText(props) {
+    
   return (
     <div className="input-group-text">
-            <label className="label-text" htmlFor={props.inputId}>
+            <label className={"label-text"} htmlFor="name">
               {props.labelText}
             </label>
             <input
@@ -15,16 +15,8 @@ function InputGroupText(props) {
               value={props.inputValue}
               onChange={props.handleName}
             />
-          </div>
+    </div>
   )
-}
-InputGroupText.propTypes = {
-    inputId: PropTypes.string,
-    labelText: PropTypes.string,
-    inputName: PropTypes.string,
-    inputPlaceholder: PropTypes.string,
-    inputValue: PropTypes.string,
-    handleName: PropTypes.func,
 }
 
 export default InputGroupText

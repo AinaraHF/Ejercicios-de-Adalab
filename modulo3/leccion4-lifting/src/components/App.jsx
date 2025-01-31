@@ -1,7 +1,8 @@
+
 // Fichero src/components/App.jsx
-import InputGroupText from "./InputGroupText";
-import Preview from "./Preview";
 import { useState } from "react";
+import Preview from "./Preview";
+import InputGroupText from "./InputGroupText";
 
 const App = () => {
   // Estados del componente
@@ -48,15 +49,7 @@ const App = () => {
   };
 
   // Funciones que nos ayudan a renderizar
-  const renderPaymentTypeText = () => {
-    if (paymentType === "creditCard") {
-      return "Tarjeta de crédito";
-    } else if (paymentType === "cash") {
-      return "Efectivo";
-    } else if (paymentType === "cashOnDelivery") {
-      return "Contra reembolso";
-    }
-  };
+  
 
   const isValidForm = () => {
     // El formulario solo es válido cuando los inputs de tipo texto no estén vacíos, cuando se haya marcado un tipo de pago y cuando los términos legales sean true
@@ -79,7 +72,8 @@ const App = () => {
         <h2>Rellena tus datos para finalizar la compra:</h2>
         <div className="form">
           {/* name */}
-          <InputGroupText inputId={inputId} labelText={labelText} inputName={inputName} inputPlaceholder={inputPlaceholder} inputValue={inputValue} handleName={handleName}/>
+
+          <InputGroupText labelText={labelText} inputName={inputName} inputId={inputId} inputPlaceholder={inputPlaceholder} inputValue={inputValue} handleChange ={handleName}/>
 
           {/* email */}
           <div className="input-group-text">
@@ -181,7 +175,7 @@ const App = () => {
           </div>
         </div>
 
-        <Preview name={name} email={email} region={region} renderPaymentTypeText={renderPaymentTypeText()} legalTerms={legalTerms}/>
+        <Preview name={name} email={email} region={region} paymentType={paymentType} legalTerms={legalTerms}/>
 
         {/* reset */}
         {/* Este botón debe estar inhabilitado mientras el formulario no sea válido */}

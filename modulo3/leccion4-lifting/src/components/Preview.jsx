@@ -1,6 +1,16 @@
-import PropTypes from "prop-types";
 
 function Preview(props) {
+
+    const renderPaymentTypeText = () => {
+        if (props.paymentType === "creditCard") {
+          return "Tarjeta de crédito";
+        } else if (props.paymentType === "cash") {
+          return "Efectivo";
+        } else if (props.paymentType === "cashOnDelivery") {
+          return "Contra reembolso";
+        }
+      };
+
   return (
     <div className="preview">
           <h2>Tus datos son:</h2>
@@ -8,7 +18,7 @@ function Preview(props) {
             <li>Nombre: {props.name}</li>
             <li>Email: {props.email}</li>
             <li>Región: {props.region}</li>
-            <li>Método de pago: {props.renderPaymentTypeText}</li>
+            <li>Método de pago: {renderPaymentTypeText()}</li>
             <li>
               Has aceptado nuestros términos legales:{" "}
               {props.legalTerms === true ? "Sí" : "No"}
@@ -18,11 +28,4 @@ function Preview(props) {
   )
 }
 
-Preview.propTypes = {
-    name: PropTypes.string,
-    email: PropTypes.string,
-    region: PropTypes.string,
-    renderPaymentTypeText: PropTypes.func,
-    legalTerms: PropTypes.bool,
-}
 export default Preview
