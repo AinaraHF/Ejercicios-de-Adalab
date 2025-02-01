@@ -1,0 +1,21 @@
+.tooltip{
+    display: flex;
+
+}
+.tooltipicon{
+    border-radius: 40px;
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tooltiptext{
+    opacity: 0;
+    border: 1px solid gray;
+    background-color: aliceblue;
+
+}
+
+.tooltipicon:hover + .tooltiptext{
+    opacity: 1
+}
