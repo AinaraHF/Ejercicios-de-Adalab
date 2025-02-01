@@ -1,9 +1,14 @@
 
 function InputGroupText(props) {
-    
+
+  const handleInputChange = (ev) => {
+      props.handleChange(ev.target.value)
+      
+  }
+
   return (
     <div className="input-group-text">
-            <label className={"label-text"} htmlFor="name">
+            <label className="label-text" htmlFor={props.inputId}>
               {props.labelText}
             </label>
             <input
@@ -13,7 +18,7 @@ function InputGroupText(props) {
               id={props.inputId}
               placeholder={props.inputPlaceholder}
               value={props.inputValue}
-              onChange={props.handleName}
+              onChange={handleInputChange}
             />
     </div>
   )

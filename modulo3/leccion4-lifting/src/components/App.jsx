@@ -3,6 +3,10 @@
 import { useState } from "react";
 import Preview from "./Preview";
 import InputGroupText from "./InputGroupText";
+import InputGroupSelect from "./InputGroupSelect";
+import InputGroupRadio from "./InputGroupRadio";
+import InputGroupCheck from "./InputGroupCheck";
+import Button from "./Button";
 
 const App = () => {
   // Estados del componente
@@ -13,25 +17,25 @@ const App = () => {
   const [legalTerms, setLegalTerms] = useState(false);
 
   // Eventos
-  const handleName = (ev) => {
-    setName(ev.target.value);
+  const handleName = (value) => {
+      setName(value);
   };
 
-  const handleEmail = (ev) => {
-    setEmail(ev.target.value);
+  const handleEmail = (value) => {
+    setEmail(value);
   };
 
-  const handleRegion = (ev) => {
-    setRegion(ev.target.value);
+  const handleRegion = (value) => {
+    setRegion(value);
   };
 
-  const handlePaymentType = (ev) => {
-    setPaymentType(ev.target.value);
+  const handlePaymentType = (value) => {
+    setPaymentType(value);
   };
 
-  const handleLegalTerms = (ev) => {
+  const handleLegalTerms = (checked) => {
     // Como lo que nos interesa es si está activo o no, guardamos el checked
-    setLegalTerms(ev.target.checked);
+    setLegalTerms(checked);
   };
 
   const handleResetButton = () => {
@@ -71,114 +75,31 @@ const App = () => {
       <form className="form" onSubmit={handleForm}>
         <h2>Rellena tus datos para finalizar la compra:</h2>
         <div className="form">
-          {/* name */}
+          
+          <InputGroupText labelText={"Escribe un nombre:"} inputName="name" inputId="name" inputPlaceholder={"María García"} inputValue={name} handleChange ={handleName}/>
+          <InputGroupText labelText={"Escribe un email:"} inputName="email" inputId="email"inputPlaceholder={"mariagarcia@gmail.com"} inputValue={email} handleChange ={handleEmail}/>
+          <InputGroupSelect labelText={"Indica tu región:"} selectName="region" selectId="region" selectValue={region} handleChange={handleRegion}/>
 
-          <InputGroupText labelText={labelText} inputName={inputName} inputId={inputId} inputPlaceholder={inputPlaceholder} inputValue={inputValue} handleChange ={handleName}/>
-
-          {/* email */}
-          <div className="input-group-text">
-            <label className="label-text" htmlFor="email">
-              Escribe un email:
-            </label>
-            <input
-              className="input-text"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="mariagarcia@gmail.com"
-              value={email}
-              onChange={handleEmail}
-            />
-          </div>
-
-          {/* region */}
-          <div className="input-group-select">
-            <label className="label-text" htmlFor="region">
-              Indica tu región:
-            </label>
-            <select
-              className="input-select"
-              name="region"
-              id="region"
-              value={region}
-              onChange={handleRegion}
-            >
-              <option>España peninsular</option>
-              <option>Islas Canarias</option>
-              <option>Islas Baleares</option>
-              <option>Ceuta</option>
-              <option>Melilla</option>
-            </select>
-          </div>
-
+          
           {/* payment type */}
           <label className="label-text">Indica tu método de pago:</label>
+          <InputGroupRadio radioText="Tarjeta de crédito" radioName="paymentType" radioId="creditCard" radioValue="creditCard" inputValue={paymentType} handleChange={handlePaymentType}/>
+          <InputGroupRadio radioText="Efectivo" radioId="cash" radioValue="cash" inputValue={paymentType} handleChange={handlePaymentType}/>
+          <InputGroupRadio radioText="Contra reembolso" radioId="cashOnDelivery" radioValue="cashOnDelivery" inputValue={paymentType} handleChange={handlePaymentType}/>
 
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="creditCard">
-              Tarjeta de crédito
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea creditCard */}
-            <input
-              type="radio"
-              name="paymentType"
-              id="creditCard"
-              value="creditCard"
-              checked={paymentType === "creditCard"}
-              onChange={handlePaymentType}
-            />
-          </div>
-
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="cash">
-              Efectivo
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea cash */}
-            <input
-              type="radio"
-              name="paymentType"
-              id="cash"
-              value="cash"
-              checked={paymentType === "cash"}
-              onChange={handlePaymentType}
-            />
-          </div>
-
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="cashOnDelivery">
-              Contra reembolso
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea cashOnDelivery */}
-            <input
-              type="radio"
-              name="paymentType"
-              id="cashOnDelivery"
-              value="cashOnDelivery"
-              checked={paymentType === "cashOnDelivery"}
-              onChange={handlePaymentType}
-            />
-          </div>
 
           {/* legal terms */}
-          <div className="input-group-checkbox">
-            <label className="label-check" htmlFor="legalTerms">
-              Debes aceptar nuestros términos legales para completar la compra:
-            </label>
-            {/* Este radio solo debe aparecer activo cuando legalTerms sea true */}
-            <input
-              type="checkbox"
-              name="legalTerms"
-              id="legalTerms"
-              checked={legalTerms}
-              onChange={handleLegalTerms}
-            />
-          </div>
+          <InputGroupCheck labelText={"Debes aceptar nuestros términos legales para completar la compra:"} inputName="legalTerms" inputId="legalTerms" inputValue={legalTerms} handleChange ={handleLegalTerms}/>
+
         </div>
 
         <Preview name={name} email={email} region={region} paymentType={paymentType} legalTerms={legalTerms}/>
 
         {/* reset */}
         {/* Este botón debe estar inhabilitado mientras el formulario no sea válido */}
+        <Button buttonText="Limpiar el formulario" handleResetButton={handleResetButton}/>
+        <Button buttonText="Enviar" handleResetButton={handleResetButton}/>
+
         <input
           className="button"
           type="submit"
@@ -187,9 +108,7 @@ const App = () => {
         />
 
         {/* send */}
-        <button className="button reset" onClick={handleResetButton}>
-          Limpiar el formulario
-        </button>
+        
       </form>
     </div>
   );
