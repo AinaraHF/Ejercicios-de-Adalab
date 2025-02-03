@@ -12,23 +12,19 @@ function App() {
 
   const handleClick = (ev) =>{
     const taskId = parseInt(ev.target.id);
-    if (!taskId) return; 
-    const doneTask = tasks.findIndex((task)=> task.id === taskId);
-    if(tasks[doneTask].completed === true){
-      tasks[doneTask].completed = false;
+    if(tasks[taskId].completed){
+      setTasks({...tasks, completed:false})
     }else {
-      tasks[doneTask].completed = true;
+      setTasks({...tasks, completed:true})
     }
   }
 
-    const taskList = tasks.map((task, index)=>{
-    return <li className={task.completed === true ? "completed" :""} id={index} onClick={handleClick}>{task.task}</li>
-  })
-
-  return (
+   return (
     <>
     <h1>Mi lista de tareas</h1>
-    <ol>{taskList}</ol>
+    <ol>{tasks.map((task, index)=>(
+     <li key={index} className={task.completed ? "completed" :""} id={index} onClick={handleClick}>{task.task}</li>
+    ))}</ol>
     </>
   )
 }
