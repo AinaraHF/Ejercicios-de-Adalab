@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom"
 
 function User({ info }) {
   return (
     <article>
-      <img src={info.img} alt="" /> 
-      <p>{info.name}</p>
-      <p>{info.city}</p>
+      <Link to={`/person/${info.id}`}>
+        <img src={info.img} alt="" /> 
+        <p>{info.name}</p>
+        <p>{info.city}</p>
+      </Link>
     </article>
   )
 }
